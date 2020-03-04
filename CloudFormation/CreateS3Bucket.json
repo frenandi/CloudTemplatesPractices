@@ -1,0 +1,11 @@
+{
+    "Resources" : {
+        "S3Bucket" : {
+            "Type" : "AWS::S3::Bucket",
+            "Properties": {
+                "AccessControl" : "Private",
+                "BucketName" : "frenandi-cloudformation-s3-bucket"
+                }   
+        }
+    }
+}
