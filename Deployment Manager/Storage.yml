@@ -1,0 +1,15 @@
+imports:
+  - path: storagebucket-acl.jinja
+
+resources:
+  - name: frenandiGCPBucket
+    type: storagebucket-acl.jinja
+    properties:
+      region: us-central1
+      storageClass: REGIONAL
+      sourceBucket: my-test-bucket-source
+      sourceObjects:
+        - file: testfile1.tar.gz.sha256
+        - file: testfile1.tar.gz
+        - file: mydbdump-v0.1.sql
+          reader: osm.hammami@gmail.com
